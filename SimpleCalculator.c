@@ -38,11 +38,15 @@ int main(void){
                     scanf(" %f",&nume);
                 printf("What is the denominator?");
                     scanf(" %f",&denom);
-                    if(denom==0)
+                    while(denom==0){
                         printf("Error: Can't divide by 0.");
                         return 1;
-                div_result = nume/denom;
-               printf("%.1f divided by %.1f = %.1f",nume,denom,div_result);
+                    }
+                while(denom!=0){
+                    div_result = nume/denom;
+                    printf("%.1f divided by %.1f = %.1f",nume,denom,div_result);
+                    return 0;
+                }
             }
            }
     else if ((operator=='+') || (operator=='-') || (operator=='*')){
